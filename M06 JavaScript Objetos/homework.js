@@ -17,8 +17,15 @@ function crearGato(nombre, edad) {
   //el objeto se declara como variable y el contenido va en corchete
   //dos datos importante estructura clave: valor y al finalizar la coma
   //funcion no tiene nombre en este caso
-   var animal = {nombre: nombre, edad: edad, meow: function () {return "Meow!"}}
+   var animal = {
+      nombre: nombre,
+      edad: edad, 
+      meow: function () {
+         return "Meow!"
+      }
+      }
    return animal
+   //cuando al objeto se le informa que tiene una propiedad, se refiere a la clave o Key
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -26,7 +33,11 @@ function nuevoUsuario(nombre, email, password) {
    // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
    // Retornar el objeto.
    // Tu código:
-   var registro = {nombre: nombre, email: email, password: password}
+   var registro = {
+      nombre: nombre,
+      email: email,
+      password: password
+   }
    return registro
 }
 
@@ -36,7 +47,10 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
-   objeto[propiedad] = null
+   //Muchas veces nos puede suceder que necesitemos utilizar una variable externa
+   //para guardarla como propiedad en un objeto. Es importante que en esos casos 
+   //recordemos utilizar Bracket-Notation sin comillas para que funcione correctamente.
+   objeto[propiedad] = null; // propiedad es la variable externa y en este caso es la clave (key), null es el valor para esa propiedad
    return objeto
 }
 
@@ -90,7 +104,7 @@ function tienePropiedad(objeto, propiedad) {
       return true
    }  else return false
   //El método hasOwnProperty() nos permitirá especificar un nombre, y verificar si este
-   // existe como una propiedad dentro de un objeto. En cada caso devolverá true o false. 
+  //existe como una propiedad dentro de un objeto. En cada caso devolverá true o false. 
 }
 
 function verificarPassword(objetoUsuario, password) {
